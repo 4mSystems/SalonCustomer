@@ -43,8 +43,8 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="index.html">الرئيسية</a></li>
-                                        <li><a href="Catagori.html">خدماتنا</a></li>
-                                        <li><a href="product_list.html">منتجاتنا</a></li>
+                                        <li><a href="Services.html">خدماتنا</a></li>
+                                        <li><a href="Products.html">منتجاتنا</a></li>
                                         <li><a href="#">صفحات</a>
                                             <ul class="submenu">
                                                 <li><a href="login.html">تسجيل الدخول</a></li>
@@ -120,7 +120,6 @@
                         <div class="select_option">
                             <div class="select_option_list">الكل <i class="right fas fa-caret-down"></i></div>
                             <div class="select_option_dropdown" id="product_categories">
-                                <p><a href="#product_item" onclick="getAllProducts()">الكل</a></p>
                             </div>
                         </div>
                     </div>
@@ -365,6 +364,7 @@
                 if (res != null) {
                     if (res.data.length < 0) {
                     } else {
+                        $("#product_categories").append('<p><a href="#product_item" onclick="getAllProducts()">الكل</a></p>');
                         res.data.CategoryProduct.forEach(categorylist);
                         res.data.products.forEach(productslist);
                     }
