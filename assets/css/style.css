@@ -15099,7 +15099,7 @@ input:focus {
 /* line 2016, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
 
 .login_part .creat_account label {
-    color: #777777;
+    color: red;
     font-size: 14px;
     margin-bottom: 0;
     margin-left: 10px;

@@ -61,26 +61,12 @@
 
                         <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                             <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                <li class="d-none d-xl-block">
-                                    <div class="form-box f-right ">
-                                        <input type="text" name="Search" placeholder="بحث عن خدمة او منتج">
-                                        <div class="search-icon">
-                                            <i class="fas fa-search"></i>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class=" d-none d-xl-block">
-                                    <div class="favorit-items">
-                                        <i class="far fa-heart"></i>
-                                    </div>
-                                </li>
                                 <li>
                                     <div class="shopping-card">
                                         <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </li>
-                                <li class="d-none d-lg-block"><a href="/login.html" class="btn header-btn">تسجيل
-                                    دخول</a></li>
+                                <li class="d-none d-lg-block" id="login_item"></li>
                             </ul>
                         </div>
 
@@ -273,6 +259,11 @@
 
 
 
+
+
+
+
+
                             </script>
                             All rights reserved
                         </p>
@@ -345,8 +336,9 @@
 </script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
         data-cf-settings="118569f5f7c006bd62e80090-|49" defer=""></script>
-<script>
+<script src="assets/js/check_login.js"></script>
 
+<script>
     var obj = {
         "salon_id": "2"
     }

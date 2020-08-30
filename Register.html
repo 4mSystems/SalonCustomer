@@ -129,7 +129,6 @@
     </div>
 </header>
 
-
 <div class="slider-area ">
 
     <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/category.jpg">
@@ -137,7 +136,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>تسجيل الدخول</h2>
+                        <h2>تسجيل مستخدم جديد</h2>
                     </div>
                 </div>
             </div>
@@ -145,44 +144,47 @@
     </div>
 </div>
 
-
 <section class="login_part section_padding ">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
                 <div class="login_part_text text-center">
                     <div class="login_part_text_iner">
-                        <h2>قم بإنشاء حساب جديد</h2>
-                        <p>يمكننك من خلال إنشاء حساب جديد حجز الخدمات وطلب المنتجات الخاصه بنا والتعرف على جميع المميزات
-                            المتوافره
-                            بالصالون خاصتنا والوصول الى المعلومات الخاصه بك من جهاز لوحى او موبيل
-                        </p>
-                        <a href="Register.html" class="btn_3">انشاء حساب جديد</a>
+                        <h2>تسجيل الدخول</h2>
+                        <p>قم بالتسجيل الدخول الآن وتمتع بمنتاجاتنا و خدماتنا التى تلبى احتياجاتك</p>
+                        <a href="login.html" class="btn_3">لدى حساب بالفعل</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="login_part_form">
                     <div class="login_part_form_iner">
-                        <h3>اهلا بك مجددا !<br>
-                            من فضلك قم بتسجل الدخول الآن</h3>
-                        <form class="row contact_form" id="login_form" method="post">
+                        <h3>اهلا بك !</h3>
+                        <form class="row contact_form" id="sign_up_form" method="post">
                             <div class="col-md-12 form-group p_star">
-                                <input type="email" class="form-control" id="email" name="email"
-                                       placeholder="البريد الإلكترونى" required>
+                                <input type="text" class="form-control" id="name" name="name" required
+                                       placeholder="اسم المستخدم">
                             </div>
                             <div class="col-md-12 form-group p_star">
-                                <input type="password" class="form-control" id="password" name="password"
-                                       placeholder="كلمة المرور" required>
+                                <input type="email" class="form-control" id="email" name="email" required
+                                       placeholder="البريد الإلكترونى">
                             </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="phone" name="phone" required
+                                       placeholder="رقم الهاتف">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="password" class="form-control" id="password" name="password" required
+                                       placeholder="كلمة المرور">
+                            </div>
+
                             <div class="col-md-12 form-group">
                                 <div class="creat_account d-flex align-items-center">
                                     <span id="errors" class="alert-danger"></span>
                                 </div>
-                                <button type="submit" value="submit" id="login" class="btn_3">
-                                    تسجيل الدخول
+                                <button type="submit" value="submit" class="btn_3">
+                                    إنشاء حساب جديد
                                 </button>
-                                <a class="lost_pass" href="#">هل نسيت كلمة المرور ؟</a>
                             </div>
                         </form>
                     </div>
@@ -291,41 +293,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             </script>
                             All rights reserved
                         </p>
@@ -398,18 +365,20 @@
     if (sessionStorage.getItem("user_data") != null) {
         document.location.href = 'index.html';
     }
-    $('#login_form').on('submit', function (event) {
+    $('#sign_up_form').on('submit', function (event) {
         event.preventDefault();
-        var login_obj = {
+        var reg_obj = {
             "salon_id": '2',
             "type": 'customer',
             "email": $('#email').val(),
+            "name": $('#name').val(),
+            "phone": $('#phone').val(),
             "password": $('#password').val(),
         }
         $.ajax({
-            url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/login",
+            url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/register",
             method: 'POST',
-            data: login_obj,
+            data: reg_obj,
             dataType: "json",
             success: function (data) {
                 if (data.code == 200) {
@@ -422,33 +391,6 @@
             }
         });
     });
-
-    // $('#login').on('click', function () {
-    //     var login_obj = {
-    //         "salon_id": '2',
-    //         "type": 'customer',
-    //         "email": $('#email').val(),
-    //         "password": $('#password').val(),
-    //     }
-    //     console.log(login_obj);
-    //     // $.ajax({
-    //     //     url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/login",
-    //     //     type: 'POST',
-    //     //     data: login_obj,
-    //     //     dataType: "json",
-    //     //     success: function (data) {
-    //     //         if (data.code == 200) {
-    //     //             sessionStorage.setItem("user_data", JSON.stringify(data));
-    //     //             document.location.href = 'index.html';
-    //     //         } else {
-    //     //             $('#errors').html(data.msg);
-    //     //         }
-    //     //         console.log(data);
-    //     //     }
-    //     // });
-    //
-    // });
-
 </script>
 
 </body>

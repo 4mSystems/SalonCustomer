@@ -42,7 +42,7 @@
                                     <ul id="navigation">
                                         <li><a href="index.html">الرئيسية</a></li>
                                         <li><a href="Services.html">خدماتنا</a></li>
-                                        <li><a href="product_list.html">منتجاتنا</a></li>
+                                        <li><a href="Products.html">منتجاتنا</a></li>
                                         <li><a href="#">صفحات</a>
                                             <ul class="submenu">
                                                 <li><a href="login.html">تسجيل الدخول</a></li>
@@ -58,18 +58,12 @@
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 fix-card">
                             <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                <li class=" d-none d-xl-block">
-                                    <div class="favorit-items">
-                                        <i class="far fa-heart"></i>
-                                    </div>
-                                </li>
                                 <li>
                                     <div class="shopping-card">
                                         <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </li>
-                                <li class="d-none d-lg-block"><a href="/login.html" class="btn header-btn">تسجيل
-                                    دخول</a></li>
+                                <li class="d-none d-lg-block" id="login_item"></li>
                             </ul>
                         </div>
                         <div class="col-12">
@@ -224,6 +218,12 @@
 
 
 
+
+
+
+
+
+
                             </script>
                             All rights reserved
                         </p>
@@ -291,11 +291,8 @@
 </script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
         data-cf-settings="1ca6cf3a891fc36f9bb66d9d-|49" defer=""></script>
+<script src="assets/js/check_login.js"></script>
 <script>
-
-    var obj = {
-        "salon_id": "2"
-    }
     getAllServices()
 
     function getAllServices() {
