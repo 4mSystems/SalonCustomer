@@ -20,8 +20,24 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body class="arabic">
+    <div class="loadingio-spinner-spinner" id="loader">
+        <div class="ldio-9xbuwy9b2hh">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <header>
         <div class="header-area">
             <div class="main-header ">
@@ -35,46 +51,76 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
-
+                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-5">
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="Catagori.html">Services</a></li>
-                                            <li class="hot"><a href="#">Latest</a>
-                                                <ul class="submenu">
-                                                    <li><a href="product_list.html"> Product list</a></li>
-                                                    <li><a href="single-product.html"> Product Details</a></li>
-                                                </ul>
+                                            <li>
+                                                <a href="index.html">الرئيسية</a>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li>
+                                                <a href="Services.html">خدماتنا</a>
+                                            </li>
+                                            <li>
+                                                <a href="Products.html">منتجاتنا</a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">تواصل معانا</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                            <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                    <li class="d-none d-xl-block">
-                                        <div class="form-box f-right ">
-                                            <input type="text" name="Search" placeholder="Search products">
-                                            <div class="search-icon">
-                                                <i class="fas fa-search"></i>
+                                    <li class="dropdown">
+                                        <div class="shopping-card">
+                                            <a href="#" type="button" data-toggle="dropdown" onclick="OpenDialogCart()">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                            <span class="badge">3</span>
+                                            <div class="dropdown-menu">
+                                                <div class="row total-header-section">
+                                                    <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                                                        <p>الإجمالى:
+                                                            <span class="text-info" id="total-amount">0دك</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6 col-sm-6 col-6">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cart-container">
+                                                    <div class="loadingio-spinner-spinner">
+                                                        <div class="ldio-9xbuwy9b2hh">
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                                                        <button class="btn btn-primary btn-block"
+                                                            onclick="window.location.assign('cartProduct.html')">Checkout</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </li>
-                                    <li class=" d-none d-xl-block">
-                                        <div class="favorit-items">
-                                            <i class="far fa-heart"></i>
-                                        </div>
+                                    <li class="d-none d-lg-block" id="login_item">
+
                                     </li>
-                                    <li>
-                                        <div class="shopping-card">
-                                            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="d-none d-lg-block"> <a href="/login.html" class="btn header-btn">Sign
-                                            in</a></li>
                                 </ul>
                             </div>
 
@@ -87,10 +133,10 @@
             </div>
         </div>
     </header>
-
     <div class="slider-area ">
 
-        <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/category.jpg">
+        <div class="single-slider slider-height2 d-flex align-items-center"
+            data-background="assets/img/hero/category.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -117,81 +163,28 @@
                                 <th scope="col">الاجمالى</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="assets/img/categori/product3.png" alt="" />
-                                        </div>
-                                        <div class="media-body">
-                                            <p>منتج واحد طويل وكثير</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
 
-                                        <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                                        <input class="input-number" type="text" value="1" min="0" max="10">
-                                        <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="assets/img/categori/product4.png" alt="" />
-                                        </div>
-                                        <div class="media-body">
-                                            <p>منتج واحد طويل وكثير</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-
-                                        <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                                        <input class="input-number" type="text" value="1" min="0" max="10">
-                                        <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <h5>الاجمالى</h5>
-                                </td>
-                                <td>
-                                    <h5>$2160.00</h5>
-                                </td>
-                            </tr>
-                            <tr class="shipping_area">
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <h5>التوصيل</h5>
-                                </td>
+                        <tbody id="prodcut">
+                            <!-- 
+                            
                                 <td>
                                     <div class="shipping_box">
                                         <p>سعر التوصيل</p>
                                     </div>
                                 </td>
+                            </tr> 
+                        -->
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th scope="col">الخدمات</th>
+                                <th scope="col">السعر</th>
+                                <th scope="col">اختار التاريخ</th>
+                                <th scope="col">الاجمالى</th>
                             </tr>
+                        </thead>
+                        <tbody id="service">
+
                         </tbody>
                     </table>
                     <div class="checkout_btn_inner float-right">
@@ -202,9 +195,11 @@
             </div>
     </section>
 
+
+
     <footer>
 
-        <div class="footer-area footer-padding2">
+        <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
@@ -212,12 +207,14 @@
                             <div class="single-footer-caption mb-30">
 
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html">
+                                        <h1>logo</h1>
+                                    </a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.
-                                        </p>
+                                        <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم
+                                            كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
                                     </div>
                                 </div>
                             </div>
@@ -226,39 +223,20 @@
                     <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Quick Links</h4>
+                                <h4>محتويات الموقع</h4>
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="#"> Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>New Products</h4>
-                                <ul>
-                                    <li><a href="#">Woman Cloth</a></li>
-                                    <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#"> Man Accessories</a></li>
-                                    <li><a href="#"> Rubber made Toys</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Support</h4>
-                                <ul>
-                                    <li><a href="#">Frequently Asked Questions</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Report a Payment Issue</a></li>
+                                    <li>
+                                        <a href="index.html">الرئيسية</a>
+                                    </li>
+                                    <li>
+                                        <a href="Services.html">خدماتنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="Products.html">منتجاتنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">تواصل معانا</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -269,21 +247,22 @@
                     <div class="col-xl-7 col-lg-7 col-md-7">
                         <div class="footer-copy-right">
                             <p>
-                                Copyright &copy;
-                                <script type="9420d31a3d75627f42770054-text/javascript">
+                                جميع الحقوق محفوظه &copy;
+                                <script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                </script>
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-5">
                         <div class="footer-copy-right f-right">
-
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f fa-lg"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -292,48 +271,113 @@
         </div>
 
     </footer>
-
-
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/popper.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/bootstrap.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/jquery.slicknav.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/owl.carousel.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/slick.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/wow.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/animated.headline.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/jquery.scrollUp.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/jquery.nice-select.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/jquery.sticky.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/jquery.magnific-popup.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/contact.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/jquery.form.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/jquery.validate.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/mail-script.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script src="./assets/js/plugins.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script src="./assets/js/main.js" type="9420d31a3d75627f42770054-text/javascript"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="9420d31a3d75627f42770054-text/javascript"></script>
-    <script type="9420d31a3d75627f42770054-text/javascript">
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
+    <script src="./assets/js/cookie.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/vendor/owlSlider.js"></script>
+    <script>
+        var value = JSON.parse(Cookies.get('loginSalon')).data.api_token;
+        var obj = {
+            api_token: value
         }
-        gtag('js', new Date());
+        var totalProduct = 0, totalService = 0;
+        $.ajax({
+            url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/allCart",
+            dataType: "json",
+            type: 'POST',
+            data: obj,
+            success: function (res) {
+                if (res.data.carts_products.length == 0) {
+                    $("#prodcut").append("<tr><td colspan='4' style='text-align:center;padding:20px 0px'>لا يوجد منتاجات تمت الاضافة</td></tr>")
+                }
+                if (res.data.carts_services.length == 0) {
+                    $("#service").append("<tr><td colspan='4' style='text-align:center;padding:20px 0px'>لا يوجد خدمات تمت اضافتها</td></tr>")
+                } else {
+                    res.data.carts_services.forEach(cartList);
+                    res.data.carts_products.forEach(cartList);
+                    completeCard();
+                }
 
-        gtag('config', 'UA-23581568-13');
+                var script = document.createElement("script");
+                script.src = "./assets/js/main.js";
+                document.body.appendChild(script);
+                $("#loader").fadeOut();
+            }
+        });
+
+        function completeCard() {
+            $("#prodcut").append('<tr><td></td><td></td><td><h5>الاجمالى</h5></td><td><h5>' + totalProduct + 'دك</h5></td></tr>');
+            $("#service").append('<tr><td></td><td></td><td><h5>الاجمالى</h5></td><td><h5>' + totalService + 'دك</h5></td></tr>');
+        }
+        function cartList(value) {
+            var img, name, count, price;
+            if (value.product_id != null) {
+                img = value.get_product.main_image;
+                name = value.get_product.name;
+                count = value.count;
+
+                if (value.get_product.price_after != null) {
+                    price = value.get_product.price_after
+                } else {
+                    price = value.get_product.price_before
+                }
+
+                $("#prodcut").append('<tr><td><div class="media"><div class="d-flex">'
+                    + '   <img src="' + img + '" alt="" /></div>'
+                    + '<div class="media-body">'
+                    + '   <p>' + name + '</p>'
+                    + '</div></div></td>'
+                    + '<td>'
+                    + '<h5>' + price + 'دك</h5>'
+                    + ' </td>'
+                    + ' <td>'
+                    + ' <div class="product_count">'
+                    + '   <span class="input-number-decrement"> <i class="ti-minus"></i></span>'
+                    + ' <input class="input-number" data-price="' + price + '" type="text" value="' + count + '" min="0" max="10">'
+                    + '<span class="input-number-increment"> <i class="ti-plus"></i></span>'
+                    + ' </div>'
+                    + '</td>'
+                    + '<td>'
+                    + '  <h5 class="totalCount">' + price * count + 'دك</h5></td></tr>');
+                totalProduct += price * count;
+
+            } else if (value.service_id != null) {
+                img = value.get_service.image;
+                name = value.get_service.name;
+                count = 1;
+                if (value.get_service.price_after != null) {
+                    price = value.get_service.price_after;
+                } else {
+                    price = value.get_service.price_before;
+                }
+                $("#service").append('<tr><td><div class="media"><div class="d-flex">'
+                    + '<img src="' + img + '" alt="" /></div>'
+                    + '<div class="media-body">'
+                    + '<p>' + name + '</p>'
+                    + '</div></div></td>'
+                    + '<td>'
+                    + '<h5>' + price + 'دك</h5>'
+                    + '</td>'
+                    + '<td>'
+                    + '<div class="product_count">'
+                    + '<button class="btn btn-prime">اختار الوقت والتاريخ</button>'
+                    + '</div>'
+                    + '</td>'
+                    + '<td>'
+                    + '<h5>' + price * count + 'دك</h5></td></tr>');
+                totalService += price * count
+            }
+        }
     </script>
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="9420d31a3d75627f42770054-|49" defer=""></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -21,395 +21,329 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-
 <body class="arabic">
-<header>
-    <div class="header-area">
-        <div class="main-header ">
 
-            <div class="header-bottom  header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>logo</h1>
-                                </a>
+    <div class="loadingio-spinner-spinner" id="loader">
+        <div class="ldio-9xbuwy9b2hh">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <h1>logo</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-5">
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li>
+                                                <a href="index.html">الرئيسية</a>
+                                            </li>
+                                            <li>
+                                                <a href="Services.html">خدماتنا</a>
+                                            </li>
+                                            <li>
+                                                <a href="Products.html">منتجاتنا</a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">تواصل معانا</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 fix-card">
+                                <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
+                                    <li class="dropdown">
+                                        <div class="shopping-card">
+                                            <a href="#" type="button" data-toggle="dropdown" onclick="OpenDialogCart()">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                            <span class="badge">0</span>
+                                            <div class="dropdown-menu">
+                                                <div class="row total-header-section">
+                                                    <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                                                        <p>الإجمالى:
+                                                            <span class="text-info" id="total-amount">0دك</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6 col-sm-6 col-6">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cart-container">
+                                                    <div class="loadingio-spinner-spinner">
+                                                        <div class="ldio-9xbuwy9b2hh">
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                                                        <button class="btn btn-primary btn-block"
+                                                            onclick="window.location.assign('cartProduct.html')">Checkout</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li class="d-none d-lg-block" id="login_item">
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="alertdanger" class="alert alert-danger" role="alert" style="position: fixed; bottom:10px; left:10px;z-index:1000000;text-align: center;width:400px;display: none;">
+        تم اضافة هذه الخدمة من قبل
+    </div>
+    <div id="alert" class="alert alert-success" role="alert" style="position: fixed; bottom:10px; left:10px; z-index:1000000;text-align: center;width:400px;display: none;">
+        تمت الاضافة بنجاح
+    </div>
 
-                            <div class="main-menu f-right d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a href="index.html">الرئيسية</a></li>
-                                        <li><a href="Services.html">خدماتنا</a></li>
-                                        <li><a href="Products.html">منتجاتنا</a></li>
-                                        <li><a href="#">صفحات</a>
-                                            <ul class="submenu">
-                                                <li><a href="login.html">تسجيل الدخول</a></li>
-                                                <li><a href="cart.html">سلة المشتريات</a></li>
-                                                <li><a href="about.html">من نحن</a></li>
-                                                <li><a href="checkout.html">اتمام عملية الشراء</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">تواصل معانا</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
-                            <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                <li>
-                                    <div class="shopping-card">
-                                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                    </div>
-                                </li>
-                                <li class="d-none d-lg-block" id="login_item"></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
+    <div class="slider-area ">
+        <div class="single-slider slider-height2 d-flex align-items-center"
+            data-background="assets/img/hero/category.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>منتجاتنا</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
 
-<div class="slider-area ">
-    <div class="single-slider slider-height2 d-flex align-items-center"
-         data-background="assets/img/hero/category.jpg">
+
+    <section class="latest-product-area section_padding">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                        <h2>منتجاتنا</h2>
-                    </div>
+            <div class="loadingio-spinner-spinner">
+                <div class="ldio-9xbuwy9b2hh">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product_sidebar">
+                        <div class="single_sedebar">
 
-<section class="latest-product-area section_padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="product_sidebar">
+                            <input type="text" name="#" placeholder="ابحث عن الخدمة" id="product-search">
+                            <i class="ti-search" onclick="search(event)"></i>
 
-                    <div class="single_sedebar">
-                        <div class="select_option">
-                            <div class="select_option_list">الكل <i class="right fas fa-caret-down"></i></div>
-                            <div class="select_option_dropdown" id="product_categories">
-                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                <div class="product_list">
-                    <div class="row " id="product_item">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- <section class="client_review">
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <div class="client_review_slider owl-carousel">
-        <div class="single_client_review">
-          <div class="client_img">
-            <img src="assets/img/client.png" alt="#">
-          </div>
-          <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate
-            human suffering.</p>
-          <h5>- Micky Mouse</h5>
-        </div>
-        <div class="single_client_review">
-          <div class="client_img">
-            <img src="assets/img/client_1.png" alt="#">
-          </div>
-          <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate
-            human suffering.</p>
-          <h5>- Micky Mouse</h5>
-        </div>
-        <div class="single_client_review">
-          <div class="client_img">
-            <img src="assets/img/client_2.png" alt="#">
-          </div>
-          <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate
-            human suffering.</p>
-          <h5>- Micky Mouse</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section> -->
-
-
-<div class="shop-method-area ">
-    <div class="container">
-        <div class="row d-flex justify-content-between">
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single-method mb-40">
-                    <i class="ti-unlock"></i>
-                    <h6>أمان عمليات الدفع</h6>
-                    <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single-method mb-40">
-                    <i class="ti-unlock"></i>
-                    <h6>أمان عمليات الدفع</h6>
-                    <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single-method mb-40">
-                    <i class="ti-reload"></i>
-                    <h6>أمان عمليات الدفع</h6>
-                    <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="gallery-wrapper lf-padding">
-    <div class="gallery-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="gallery-items">
-                    <img src="assets/img/gallery/gallery1.jpg" alt="">
-                </div>
-                <div class="gallery-items">
-                    <img src="assets/img/gallery/gallery2.jpg" alt="">
-                </div>
-                <div class="gallery-items">
-                    <img src="assets/img/gallery/gallery3.jpg" alt="">
-                </div>
-                <div class="gallery-items">
-                    <img src="assets/img/gallery/gallery4.jpg" alt="">
-                </div>
-                <div class="gallery-items">
-                    <img src="assets/img/gallery/gallery5.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-area footer-padding">
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-                    <div class="single-footer-caption mb-50">
-                        <div class="single-footer-caption mb-30">
-
-                            <div class="footer-logo">
-                                <a href="index.html">
-                                    <h1>logo</h1>
-                                </a>
-                            </div>
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم
-                                        كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
+                        <div class="single_sedebar">
+                            <div class="select_option">
+                                <div class="select_option_list"><span id="cat-select">اختار التصنيف</span><i
+                                        class="right fas fa-caret-down"></i></div>
+                                <div class="select_option_dropdown" id="product_categories">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>لينكات هامة</h4>
-                            <ul>
-                                <li><a href="#">تواصل </a></li>
-                                <li><a href="#">من نحن</a></li>
-                            </ul>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                    <div class="product_list">
+                        <div class="row " id="service_item">
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-7 col-lg-7 col-md-7">
-                    <div class="footer-copy-right">
-                        <p>
-                            Copyright &copy;
-                            <script type="b2f45c0916bf98b83cff5ec3-text/javascript">
-                                    document.write(new Date().getFullYear());
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-                            </script>
-                            All rights reserved
-                        </p>
+    <div class="shop-method-area section_padding">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-unlock"></i>
+                        <h6>أمان عمليات الدفع</h6>
+                        <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-5 col-md-5">
-                    <div class="footer-copy-right f-right">
-
-                        <div class="footer-social">
-                            <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
-                            <a href="#"><i class="fab fa-behance fa-lg"></i></a>
-                            <a href="#"><i class="fas fa-globe fa-lg"></i></a>
-                        </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-unlock"></i>
+                        <h6>أمان عمليات الدفع</h6>
+                        <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-reload"></i>
+                        <h6>أمان عمليات الدفع</h6>
+                        <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-</footer>
 
+    <div class="gallery-wrapper lf-padding">
+        <div class="gallery-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery1.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery2.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery3.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery4.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <footer>
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
 
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <h1>logo</h1>
+                                    </a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم
+                                            كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>محتويات الموقع</h4>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">الرئيسية</a>
+                                    </li>
+                                    <li>
+                                        <a href="Services.html">خدماتنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="Products.html">منتجاتنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">تواصل معانا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<script src="./assets/js/jquery.slicknav.min.js"></script>
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <div class="footer-copy-right">
+                            <p>
+                                جميع الحقوق محفوظه &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5">
+                        <div class="footer-copy-right f-right">
+                            <div class="footer-social">
+                                <a href="#">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
-
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
-
-<script src="./assets/js/jquery.scrollUp.min.js"></script>
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
-
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
-
-<script src="./assets/js/swiper.min.js"></script>
-
-<script src="./assets/js/mixitup.min.js"></script>
-<script src="./assets/js/jquery.counterup.min.js"></script>
-<script src="./assets/js/waypoints.min.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-
-</script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="118569f5f7c006bd62e80090-|49" defer=""></script>
-<script src="assets/js/check_login.js"></script>
-
-<script>
-    var obj = {
-        "salon_id": "2"
-    }
-    getAllProducts()
-
-    function getAllProducts() {
-        $("#product_item").empty();
-        $("#product_categories").empty();
-        $.ajax({
-            url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/products",
-            type: 'POST',
-            data: obj,
-            dataType: 'json', // added data type
-            success: function (res) {
-                if (res != null) {
-                    if (res.data.length < 0) {
-                    } else {
-                        $("#product_categories").append('<p><a href="#product_item" onclick="getAllProducts()">الكل</a></p>');
-                        res.data.CategoryProduct.forEach(categorylist);
-                        res.data.products.forEach(productslist);
-                    }
-
-                    function categorylist(value) {
-                        $("#product_categories").append('<p><a href="#product_item" id="cat_id" data-cat-id="' + value.id + '">' + value.name + '</a></p>');
-                    }
-
-
-                }
-            }
-        });
-    }
-
-
-    function productslist(value) {
-        $("#product_item").append('<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6" >'
-            + '<div class="single-product mb-60">'
-            + '<div class="product-img">'
-            + ' <img src="' + value.main_image + '" alt=""></div>'
-            + '<div class="product-caption">'
-            + '<h4><a href="#">' + value.name + '</a></h4>'
-            + '<div class="price">'
-            + ' <ul>'
-            + '<li>' + value.price_before + '</li>'
-            + '</ul>'
-            + '</div>'
-            + '<div class="hero__btn" data-animation="fadeInRight" data-delay="1s">'
-            + '<a href="Catagori.html" class="btn hero-btn">احجز موعد</a>'
-            + '</div>'
-            + '</div>'
-            + '</div></div>');
-    }
-
-    $(document).on('click', '#cat_id', function () {
-        var id = $(this).data('cat-id');
-        var body = {
-            "salon_id": "2",
-            "cat_id": id
-        }
-        $.ajax({
-            url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/productsWithCat",
-            dataType: "json",
-            type: 'POST',
-            data: body,
-            success: function (res) {
-                $("#product_item").empty();
-                res.data.forEach(productslist);
-            }
-        })
-    });
-
-</script>
+    </footer>
+    <script src="./assets/js/cookie.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/fetchData.js"></script>
 
 </body>
 

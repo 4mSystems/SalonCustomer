@@ -22,6 +22,24 @@
 </head>
 
 <body class="arabic">
+
+    <div class="loadingio-spinner-spinner" id="loader">
+        <div class="ldio-9xbuwy9b2hh">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <header>
         <div class="header-area">
             <div class="main-header ">
@@ -39,10 +57,18 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">الرئيسية</a></li>
-                                            <li><a href="Services.html">خدماتنا</a></li>
-                                            <li><a href="Products.html">منتجاتنا</a></li>
-                                            <li><a href="contact.html">تواصل معانا</a></li>
+                                            <li>
+                                                <a href="index.html">الرئيسية</a>
+                                            </li>
+                                            <li>
+                                                <a href="Services.html">خدماتنا</a>
+                                            </li>
+                                            <li>
+                                                <a href="Products.html">منتجاتنا</a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">تواصل معانا</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -51,57 +77,52 @@
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                     <li class="dropdown">
                                         <div class="shopping-card">
-                                            <a href="#" type="button" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i></a>
-                                            <span class="badge">3</span>
+                                            <a href="#" type="button" data-toggle="dropdown" onclick="OpenDialogCart()">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                            <span class="badge">0</span>
                                             <div class="dropdown-menu">
                                                 <div class="row total-header-section">
                                                     <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
-                                                        <p>الإجمالى: <span class="text-info">$2,978.24</span></p>
+                                                        <p>الإجمالى:
+                                                            <span class="text-info" id="total-amount">0دك</span>
+                                                        </p>
                                                     </div>
                                                     <div class="col-lg-6 col-sm-6 col-6">
                                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                     </div>
                                                 </div>
-                                                <div class="row cart-detail">
-                                                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
-                                                        <img src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg">
-                                                    </div>
-                                                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
-                                                        <p>Sony DSC-RX100M..</p>
-                                                        <span class="count"> الكمية : 01</span> <span class="price text-info"> السعر :$500.40</span>
-
-                                                    </div>
-                                                </div>
-                                                <div class="row cart-detail">
-                                                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
-                                                        <img src="https://cdn2.gsmarena.com/vv/pics/blu/blu-vivo-48-1.jpg">
-                                                    </div>
-                                                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
-                                                        <p>Vivo DSC-RX100M..</p>
-                                                        <span class="count"> الكمية : 01</span> <span class="price text-info"> السعر :$500.40</span>
-
-                                                    </div>
-                                                </div>
-                                                <div class="row cart-detail">
-                                                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
-                                                        <img src="https://static.toiimg.com/thumb/msid-55980052,width-640,resizemode-4/55980052.jpg">
-                                                    </div>
-                                                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
-                                                        <p>Lenovo DSC-RX100M..</p>
-                                                        <span class="count"> الكمية : 01</span> <span class="price text-info"> السعر :$500.40</span>
+                                                <div class="cart-container">
+                                                    <div class="loadingio-spinner-spinner">
+                                                        <div class="ldio-9xbuwy9b2hh">
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                                                        <button class="btn btn-primary btn-block" onclick="window.location.assign('cartProduct.html')">Checkout</button>
+                                                        <button class="btn btn-primary btn-block"
+                                                            onclick="window.location.assign('cartProduct.html')">Checkout</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.html" class="btn header-btn">تسجيل
-                      دخول</a></li>
+                                    <li class="d-none d-lg-block" id="login_item">
+
+                                    </li>
                                 </ul>
                             </div>
 
@@ -117,7 +138,8 @@
 
     <div class="slider-area ">
 
-        <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/category.jpg">
+        <div class="single-slider slider-height2 d-flex align-items-center"
+            data-background="assets/img/hero/category.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -133,49 +155,6 @@
 
     <section class="checkout_area section_padding">
         <div class="container">
-            <!-- <div class="returning_customer">
-        <div class="check_title">
-          <h2>
-            Returning Customer?
-            <a href="#">Click here to login</a>
-          </h2>
-        </div>
-        <p>
-          If you have shopped with us before, please enter your details in the
-          boxes below. If you are a new customer, please proceed to the
-          Billing & Shipping section.
-        </p>
-        <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-          <div class="col-md-6 form-group p_star">
-            <input type="text" class="form-control" id="name" name="name" value=" " />
-            <span class="placeholder" data-placeholder="Username or Email"></span>
-          </div>
-          <div class="col-md-6 form-group p_star">
-            <input type="password" class="form-control" id="password" name="password" value="" />
-            <span class="placeholder" data-placeholder="Password"></span>
-          </div>
-          <div class="col-md-12 form-group">
-            <button type="submit" value="submit" class="btn_3">
-              log in
-            </button>
-            <div class="creat_account">
-              <input type="checkbox" id="f-option" name="selector" />
-              <label for="f-option">Remember me</label>
-            </div>
-            <a class="lost_pass" href="#">Lost your password?</a>
-          </div>
-        </form>
-      </div>
-      <div class="cupon_area">
-        <div class="check_title">
-          <h2>
-            Have a coupon?
-            <a href="#">Click here to enter your code</a>
-          </h2>
-        </div>
-        <input type="text" placeholder="Enter coupon code" />
-        <a class="tp_btn" href="#">Apply Coupon</a>
-      </div> -->
             <div class="billing_details">
                 <div class="row">
                     <div class="col-lg-8">
@@ -205,98 +184,73 @@
                                 <input type="text" class="form-control" id="add1" name="add1" />
                                 <span class="placeholder" data-placeholder="العنوان تفصيلى "></span>
                             </div>
-                            <div class="col-md-12 form-group p_star">
-                                <select class="country_select">
-                  <option value="1">District</option>
-                  <option value="2">District</option>
-                  <option value="4">District</option>
-                </select>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <h3>Shipping Details</h3>
-                                    <input type="checkbox" id="f-option3" name="selector" />
-                                    <label for="f-option3">Ship to a different address?</label>
-                                </div>
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes"></textarea>
-                            </div>
                         </form>
                     </div>
                     <div class="col-lg-4">
                         <div class="order_box">
-                            <h2>Your Order</h2>
+                            <h2>تفاصيل الخدمات والحجوزات</h2>
                             <ul class="list">
                                 <li>
-                                    <a href="#">Product
-                    <span>Total</span>
-                  </a>
+                                    <p>المنتاجات</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="middle">x 02</span>
+                                        <span class="last">$720.00</span>
+                                        <span>Fresh Blackberry</span>
+                                        
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list">
+                                <li>
+                                    <p>الخدمات</p>
                                 </li>
                                 <li>
                                     <a href="#">Fresh Blackberry
-                    <span class="middle">x 02</span>
-                    <span class="last">$720.00</span>
-                  </a>
-                                </li>
-                                <li>
-                                    <a href="#">Fresh Tomatoes
-                    <span class="middle">x 02</span>
-                    <span class="last">$720.00</span>
-                  </a>
-                                </li>
-                                <li>
-                                    <a href="#">Fresh Brocoli
-                    <span class="middle">x 02</span>
-                    <span class="last">$720.00</span>
-                  </a>
+                                        <span class="middle">x 02</span>
+                                        <span class="last">$720.00</span>
+                                    </a>
                                 </li>
                             </ul>
                             <ul class="list list_2">
                                 <li>
                                     <a href="#">Subtotal
-                    <span>$2160.00</span>
-                  </a>
+                                        <span>$2160.00</span>
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="#">Shipping
-                    <span>Flat rate: $50.00</span>
-                  </a>
+                                        <span>Flat rate: $50.00</span>
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="#">Total
-                    <span>$2210.00</span>
-                  </a>
+                                        <span>$2210.00</span>
+                                    </a>
                                 </li>
                             </ul>
                             <div class="payment_item">
                                 <div class="radion_btn">
                                     <input type="radio" id="f-option5" name="selector" />
-                                    <label for="f-option5">Check payments</label>
+                                    <label for="f-option5">الدفع كاش</label>
                                     <div class="check"></div>
                                 </div>
-                                <p>
-                                    Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
-                                </p>
                             </div>
                             <div class="payment_item active">
                                 <div class="radion_btn">
                                     <input type="radio" id="f-option6" name="selector" />
-                                    <label for="f-option6">Paypal </label>
+                                    <label for="f-option6">الدفع اونلاين </label>
                                     <img src="img/product/single-product/card.jpg" alt="" />
                                     <div class="check"></div>
                                 </div>
-                                <p>
-                                    Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
-                                </p>
                             </div>
-                            <div class="creat_account">
+                            <!-- <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector" />
                                 <label for="f-option4">I’ve read and accept the </label>
                                 <a href="#">terms & conditions*</a>
                             </div>
-                            <a class="btn_3" href="#">Proceed to Paypal</a>
+                            <a class="btn_3" href="#">Proceed to Paypal</a> -->
                         </div>
                     </div>
                 </div>
@@ -306,7 +260,7 @@
 
     <footer>
 
-        <div class="footer-area footer-padding2">
+        <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
@@ -314,12 +268,14 @@
                             <div class="single-footer-caption mb-30">
 
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html">
+                                        <h1>logo</h1>
+                                    </a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.
-                                        </p>
+                                        <p>نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم
+                                            كنماذج للمشاهدة نجربة بعض النصوص التى تخستخم كنماذج للمشاهدة</p>
                                     </div>
                                 </div>
                             </div>
@@ -328,39 +284,20 @@
                     <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Quick Links</h4>
+                                <h4>محتويات الموقع</h4>
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="#"> Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>New Products</h4>
-                                <ul>
-                                    <li><a href="#">Woman Cloth</a></li>
-                                    <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#"> Man Accessories</a></li>
-                                    <li><a href="#"> Rubber made Toys</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Support</h4>
-                                <ul>
-                                    <li><a href="#">Frequently Asked Questions</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Report a Payment Issue</a></li>
+                                    <li>
+                                        <a href="index.html">الرئيسية</a>
+                                    </li>
+                                    <li>
+                                        <a href="Services.html">خدماتنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="Products.html">منتجاتنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">تواصل معانا</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -371,21 +308,22 @@
                     <div class="col-xl-7 col-lg-7 col-md-7">
                         <div class="footer-copy-right">
                             <p>
-                                Copyright &copy;
-                                <script type="59e041d444b6a4786c72f26c-text/javascript">
+                                جميع الحقوق محفوظه &copy;
+                                <script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                </script>
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-5">
                         <div class="footer-copy-right f-right">
-
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f fa-lg"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -394,48 +332,54 @@
         </div>
 
     </footer>
+    <script src="./assets/js/cookie.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/vendor/owlSlider.js"></script>
+    <script>
+        // var value = JSON.parse(Cookies.get('loginSalon')).data.api_token;
+        // var obj = {
+        //     api_token: value
+        // }
+        // var totalProduct = 0, totalService = 0;
+        // $.ajax({
+        //     url: "http://vqb.mqu.mybluehost.me/BeautyCenterApp/public/api/allCart",
+        //     dataType: "json",
+        //     type: 'POST',
+        //     data: obj,
+        //     success: function (res) {
+        //         if (res.data.carts_products.length == 0) {
+        //             $("#prodcut").append("<tr><td colspan='4' style='text-align:center;padding:20px 0px'>لا يوجد منتاجات تمت الاضافة</td></tr>")
+        //         }
+        //         if (res.data.carts_services.length == 0) {
+        //             $("#service").append("<tr><td colspan='4' style='text-align:center;padding:20px 0px'>لا يوجد خدمات تمت اضافتها</td></tr>")
+        //         } else {
+        //             res.data.carts_services.forEach(cartList);
+        //             res.data.carts_products.forEach(cartList);
+        //             completeCard();
+        //         }
 
+        var script = document.createElement("script");
+        script.src = "./assets/js/main.js";
+        document.body.appendChild(script);
+        $("#loader").fadeOut();
+        //     }
+        // });
 
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/popper.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/bootstrap.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/jquery.slicknav.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/owl.carousel.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/slick.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/wow.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/animated.headline.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/jquery.magnific-popup.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/jquery.scrollUp.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/jquery.nice-select.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/jquery.sticky.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/contact.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/jquery.form.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/jquery.validate.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/mail-script.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script src="./assets/js/plugins.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script src="./assets/js/main.js" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="59e041d444b6a4786c72f26c-text/javascript"></script>
-    <script type="59e041d444b6a4786c72f26c-text/javascript">
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
+        // function completeCard() {
+        //     $("#prodcut").append('<tr><td></td><td></td><td><h5>الاجمالى</h5></td><td><h5>' + totalProduct + 'دك</h5></td></tr>');
+        //     $("#service").append('<tr><td></td><td></td><td><h5>الاجمالى</h5></td><td><h5>' + totalService + 'دك</h5></td></tr>');
+        // }
     </script>
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="59e041d444b6a4786c72f26c-|49" defer=""></script>
 </body>
 
 </html>
